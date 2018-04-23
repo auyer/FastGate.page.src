@@ -1,0 +1,58 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+
+<div id="main">
+  <div id="hero">
+    <img alt="FastGate Logo" src={{ "/img/logo.png" | relURL }}  />
+    <!-- <h1>{{.Title}}</h1> -->
+  </div>
+  <div id="action-buttons">
+    <a class="button primary big" href="https://github.com/auyer/fastgate/releases/" onclick="_gaq.push(['_trackEvent', 'kube', 'download']);">Download</a> <a class="button outline big" href="https://github.com/auyer/fastgate/" onclick="_gaq.push(['_trackEvent', 'kube', 'github']);">View on Github</a> <a class="button outline big" href="/guides/" onclick="_gaq.push(['_trackEvent', 'kube', 'github']);">Get Started</a>
+  </div>
+  <div class="message focus" data-component="message"> <span class="close small"></span>
+    <a class="button inverted small " href="https://github.com/auyer/fastgate" >FastGate </a> is a lightweight and low overhead APIGateway built with Golang using the <mark> <a href="https://github.com/dgrap-io/badger/">Badger Key-Value Database</a></mark> and <mark> <a href="https://echo.labstack.com/">Echo Framework</a></mark>.
+  </div>
+  <div id="FastGate-features">
+    <div class="row gutters">
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Speed" height="48" src="{{ "/img/kube/icon-typo.png" | relURL }}" width="48">
+        </figure>
+        <h3>Blazing Fast</h3>
+        <p>FastGate does not rely on DNS services. and redirects recieved requests to the destination adresses.</p>
+      </div>
+      <div class="col col-4 item">
+        <figure>
+          <img alt="DataStorage" height="48" src="{{ "/img/kube/icon-baseline.png" | relURL }}" width="48">  
+        </figure>
+        <h3>Simple Data Storage</h3>
+        <p>It does not use any external database to work. It stores simple key-value data only, making it a lot faster.</p>
+      </div>
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Minimalism" height="48" src="{{ "/img/kube/icon-minimalism.png" | relURL }}" width="48">
+        </figure>
+        <h3>Customizable</h3>
+        <p>There are many customizations available to FastGate. Making it a good fit for simple projects and complicated infrastructures. </p>
+      </div>
+    </div>
+    <div class="row gutters">
+      <div class="col col-4 item">
+        <h4>Easy to Use</h4>
+        <p>You can startEvery element in kube is mobile-first and fully embraces latest and greatest tech.</p>
+      </div>
+      <div class="col col-4 item">
+        <h4>Easy to Deploy</h4>
+        <p>You can instantly run the pre-compiled birany, run in Docker, or compile it yourself with GO.</p>
+      </div>
+      <div class="col col-4 item">
+        <h4>License</h4>
+        <p>FastGate is licensed under <a href="https://opensource.org/licenses/GPL3">GPL v3.0</a>.<br>
+      FastGate is absolutely free for personal or commercial use.</p>
+    </div>
+  </div>
+</div>
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}
