@@ -1,0 +1,5 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "FastGate"
+description = "API Gateway"
+theme = "kube"
